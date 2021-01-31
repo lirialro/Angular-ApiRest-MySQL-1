@@ -1,0 +1,28 @@
+<div style= "display:block; margin-right: 40%; margin-left: 40%; margin-bottom: 25px;">
+    <!-- col-md-4 offset-md-4 -->
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <input type="number" name="id" [(ngModel)]="idQuery" placeholder="Id" class="form-control">
+                </div>
+                <button class="btn btn-success btn-block" (click)="mostrarDiscos()">
+                    Buscar
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4" *ngFor= "let disco of discos">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            {{disco.titulo}}
+        </div>
+        <div class="card-body">
+            <p>{{disco.interprete}}<br>{{disco.anyoPublicacion}}<br>Id: {{disco.id}}</p>
+        </div>
+</div> 
+
+
